@@ -67,7 +67,9 @@ for x in List_scroll:
         z -= 1
 
 browser.execute_script("window.scrollTo(0, 0)")
-List_match = browser.find_elements_by_class_name("event__match")
+# List_match = browser.find_elements_by_class_name("event__match")
+List_match = browser.find_elements_by_class_name('event__participant--home')
+
 # Время матча
 List_garbage = browser.find_elements_by_class_name("event__stage--block")
 
@@ -82,7 +84,11 @@ for x in List_garbage:
         List_match.__delitem__(garbage)
         # garbage += 1
 
-
+for match in List_match:
+    List_match_onlain = browser.find_elements_by_class_name('event__participant--home')
+    for x in List_match_onlain:
+        if match == x.text:
+            
 # if List_match.__len__() == 0:
 #     List_garbage = browser.find_elements_by_class_name("event__stage--block")
 #     garbage = 0
