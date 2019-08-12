@@ -1,18 +1,79 @@
-[INFO  - 2019-08-09T08:58:13.177Z] GhostDriver - Main - running on port 55462
-[INFO  - 2019-08-09T08:58:17.699Z] Session [d44dee70-ba83-11e9-b5d7-6df7095f7a9e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/74.0.3729.169 YaBrowser/19.6.0.1574 Yowser/2.5 Safari/537.36","webSecurityEnabled":true}
-[INFO  - 2019-08-09T08:58:17.699Z] Session [d44dee70-ba83-11e9-b5d7-6df7095f7a9e] - page.customHeaders:  - {}
-[INFO  - 2019-08-09T08:58:17.699Z] Session [d44dee70-ba83-11e9-b5d7-6df7095f7a9e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/74.0.3729.169 YaBrowser/19.6.0.1574 Yowser/2.5 Safari/537.36"}
-[INFO  - 2019-08-09T08:58:17.699Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d44dee70-ba83-11e9-b5d7-6df7095f7a9e
-[ERROR - 2019-08-09T08:58:45.974Z] Session [d44dee70-ba83-11e9-b5d7-6df7095f7a9e] - page.onError - msg: ReferenceError: Can't find variable: Set
+[INFO  - 2019-08-11T20:18:34.746Z] GhostDriver - Main - running on port 49663
+[INFO  - 2019-08-11T20:18:39.217Z] Session [34a784a0-bc75-11e9-acb6-e3e6f731b6b8] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/74.0.3729.169 YaBrowser/19.6.0.1574 Yowser/2.5 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2019-08-11T20:18:39.218Z] Session [34a784a0-bc75-11e9-acb6-e3e6f731b6b8] - page.customHeaders:  - {}
+[INFO  - 2019-08-11T20:18:39.218Z] Session [34a784a0-bc75-11e9-acb6-e3e6f731b6b8] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/74.0.3729.169 YaBrowser/19.6.0.1574 Yowser/2.5 Safari/537.36"}
+[INFO  - 2019-08-11T20:18:39.218Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 34a784a0-bc75-11e9-acb6-e3e6f731b6b8
+[ERROR - 2019-08-11T20:19:09.517Z] Session [34a784a0-bc75-11e9-acb6-e3e6f731b6b8] - page.onError - msg: ReferenceError: Can't find variable: Set
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2019-08-09T08:58:45.974Z] Session [d44dee70-ba83-11e9-b5d7-6df7095f7a9e] - page.onError - stack:
-  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1720000000:1)
-  n (https://www.myscore.ru/x/js/bundle.js?serial=1720000000:1)
-  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1720000000:1)
-  n (https://www.myscore.ru/x/js/bundle.js?serial=1720000000:1)
-  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1720000000:1)
-  n (https://www.myscore.ru/x/js/bundle.js?serial=1720000000:1)
-  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1720000000:1)
+[ERROR - 2019-08-11T20:19:09.517Z] Session [34a784a0-bc75-11e9-acb6-e3e6f731b6b8] - page.onError - stack:
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  n (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  n (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  n (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:11.764Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554751705
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:13.199Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554753145
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:14.531Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554754526
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:15.903Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554755855
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:17.218Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554757217
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:18.607Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554758546
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:19.997Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554759944
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:21.311Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554761310
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:50.064Z] Session [34a784a0-bc75-11e9-acb6-e3e6f731b6b8] - page.onError - msg: ReferenceError: Can't find variable: Set
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:50.064Z] Session [34a784a0-bc75-11e9-acb6-e3e6f731b6b8] - page.onError - stack:
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  n (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  n (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  n (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+  (anonymous function) (https://www.myscore.ru/x/js/bundle.js?serial=1721000000:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:51.482Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554791463
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:52.851Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554792793
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:54.210Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554794169
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:55.495Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554795489
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:56.806Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554796754
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:58.125Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554798080
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:19:59.415Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554799391
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-08-11T20:20:00.720Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1565554800686
 
   phantomjs://platform/console++.js:263 in error

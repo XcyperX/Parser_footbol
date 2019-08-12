@@ -7,7 +7,6 @@ import selenium as se
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
-import json
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 # phantom = dict(DesiredCapabilities.PHANTOMJS)
@@ -15,11 +14,20 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 #     "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)"
 #     "Chrome/74.0.3729.169 YaBrowser/19.6.0.1574 Yowser/2.5 Safari/537.36")
 # phantom["browserName"] = ("Mozilla Firefox")
-# browser = webdriver.PhantomJS(desired_capabilities=phantom)
+# browser = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true', '--ssl-protocol=tlsv1'], desired_capabilities=phantom)
 # browser.set_window_size(1600, 900)
-from selenium.webdriver.support.wait import WebDriverWait
 
-browser = webdriver.Firefox()
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.chrome.options import Options
+
+# browser = webdriver.Firefox()
+ua = dict(DesiredCapabilities.CHROME)
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+options.add_argument('window-size=1920x935')
+# options.add_argument("--no-startup-window")
+browser = webdriver.Chrome(chrome_options=options)
+# browser = webdriver.Chrome()
 
 browser.get('https://www.myscore.ru/')
 
@@ -44,12 +52,20 @@ garbage = 0
 for times in range(10):
     try:
         try:
-            WebDriverWait(browser, 10).until(ec.element_to_be_clickable((By.CLASS_NAME, "tabs__text")))
+            WebDriverWait(browser, 10).until(ec.element_to_be_clickable((By.XPATH, '//*[@id="live-table"]/'
+                                                                                   'div[1]/ul/li[2]/a/div')))
         except selenium.common.exceptions.TimeoutException:
             browser.refresh()
-            browser.refresh()
-            WebDriverWait(browser, 10).until(ec.element_to_be_clickable((By.CLASS_NAME, "tabs__text")))
-        browser.find_elements_by_class_name("tabs__text")[1].click()
+            WebDriverWait(browser, 10).until(ec.element_to_be_clickable((By.XPATH, '//*[@id="live-table"]/'
+                                                                                   'div[1]/ul/li[2]/a/div')))
+        browser.find_element_by_xpath('//*[@id="live-table"]/div[1]/ul/li[2]/a/div').click()
+        #     WebDriverWait(browser, 10).until(ec.element_to_be_clickable((By.XPATH, '//*[@id="live-table"]/'
+        #                                                                            'div[1]/ul/li[6]/a/div')))
+        # except selenium.common.exceptions.TimeoutException:
+        #     browser.refresh()
+        #     WebDriverWait(browser, 10).until(ec.element_to_be_clickable((By.XPATH, '//*[@id="live-table"]/'
+        #                                                                            'div[1]/ul/li[6]/a/div')))
+        # browser.find_element_by_xpath('//*[@id="live-table"]/div[1]/ul/li[6]/a/div').click()
         List_scroll = browser.find_elements_by_css_selector(".event__expander.icon--expander.expand")
         for x in List_scroll:
             try:
@@ -72,10 +88,15 @@ for times in range(10):
         List_need_match = []
         for x in List_match:
             try:
-                if int(str(x.text).strip().split("\n")[0]) < 10:
+                if int(str(x.text).strip().split("\n")[0]) < 15:
                     List_need_match.append(str(x.text).strip().split("\n")[1])
+                # List_need_match.append(str(x.text).strip().split("\n")[1])
             except ValueError:
                 pass
+        if times >= 2:
+            List_need_match = list(set(List_need_match) - set(List_match_edit))
+        else:
+            List_match_edit = List_need_match
 
         for match in List_need_match:
             List_match_online = browser.find_elements_by_class_name('event__participant--home')
@@ -184,8 +205,7 @@ for times in range(10):
                                             print("Чет не получилось )")
                                             browser.close()
                                             browser.switch_to.window(browser.window_handles[-1])
-                                            browser.close()
-                                            browser.switch_to.window(browser.window_handles[-1])
+                                            break
                                         except ImportError:
                                             print("Не нашел счет, ля!")
                                 else:
@@ -247,8 +267,7 @@ for times in range(10):
                                             print("Чет не получилось )")
                                             browser.close()
                                             browser.switch_to.window(browser.window_handles[-1])
-                                            browser.close()
-                                            browser.switch_to.window(browser.window_handles[-1])
+                                            break
                                         except ImportError:
                                             print("Не нашел счет, ля!")
                             except selenium.common.exceptions.TimeoutException:
@@ -474,10 +493,15 @@ for times in range(10):
                                 browser.execute_script("window.scrollTo(0," + str(y) + ")")
                                 List_scroll[z].click()
                                 z -= 1
-        time.sleep(60)
+        time.sleep(300)
     except selenium.common.exceptions.NoSuchWindowException:
         print("Что-то пошло не так (")
+        browser.refresh()
     except selenium.common.exceptions.NoSuchElementException:
         print("Что-то пошло не так (")
+        browser.get('https://www.myscore.ru/')
+    except IndexError:
+        print("Что-то пошло не так (")
+        browser.get('https://www.myscore.ru/')
 browser.close()
 
